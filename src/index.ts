@@ -54,3 +54,6 @@ export class Template {
     return html;
   }
 }
+
+export * from './interfaces';
+export * from './enums';
