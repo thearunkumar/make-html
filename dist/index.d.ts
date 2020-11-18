@@ -7,3 +7,5 @@ export declare class Template {
     static getDOM(type: HTMLElementType, styles?: Record<string, string>, text?: string): HTMLElement;
     static formHTML(template: ITemplate): HTMLElement;
 }
+export * from './interfaces';
+export * from './enums';

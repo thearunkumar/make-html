@@ -1,6 +1,6 @@
 {
   "name": "@thearunkumar/make-html",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Template generator",
   "main": "dist/index.js",
   "scripts": {
