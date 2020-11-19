@@ -8,7 +8,7 @@ export class Template {
 
   static assignStyles(
     element: HTMLElement,
-    styles: Record<string, string>
+    styles: Record<string, string | number>
   ): void {
     let stylesString = '';
     for (let key in styles) {
@@ -27,7 +27,7 @@ export class Template {
 
   static getDOM(
     type: HTMLElementType,
-    styles?: Record<string, string>,
+    styles?: Record<string, string | number>,
     text?: string
   ): HTMLElement {
     const element = document.createElement(type);
@@ -42,7 +42,11 @@ export class Template {
 
   static formHTML(template: ITemplate) {
     let html: HTMLElement;
-    html = Template.getDOM(template.type, template.styles, template.text);
+    html = Template.getDOM(
+      <HTMLElementType>template.type,
+      template.styles,
+      template.text
+    );
 
     if (template.children && template.children.length) {
       for (let i = 0; i < template.children.length; ++i) {

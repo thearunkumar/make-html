@@ -1,8 +1,7 @@
-import { HTMLElementType } from '../enums';
 export interface ITemplate {
-    type: HTMLElementType;
+    type: string;
     text?: string;
-    styles?: Record<string, string>;
+    styles?: Record<string, string | number>;
     children?: Array<ITemplate>;
 }
 export interface IInputJSON {
